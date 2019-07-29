@@ -3,7 +3,7 @@ h1{
   }
   
   td {
-    border: 2px solid #333;
+    border: 5px solid #333;
     height: 100px;
     width: 100px;
     text-align: center;
@@ -44,7 +44,16 @@ h1{
     left: 50%;
     transform: translateX(-50%);
   }
-
+  .resetBtn{
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.5rem;
+    background: rgb(88, 88, 255);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+  }
   .boxTaken{
     position: absolute;
     display: none;
@@ -54,8 +63,9 @@ h1{
     height: 75%;
     width: 75%;
     transform: translate(-50%,-50%);
+
   }
-  .overlay{
+  .boxTaken .overlay{
     position: absolute;
     top:50%;
     left: 50%;
@@ -63,8 +73,9 @@ h1{
     width: 100%;
     transform: translate(-50%,-50%);
     background: black;
-    opacity: .9;
+    opacity: .95;
     z-index: -1;
+    
   }
   .boxTaken > h3{
     position: absolute;
@@ -73,15 +84,75 @@ h1{
     transform: translate(-50%,-50%);
     z-index: 5;
   }
-  .boxTaken > .boxTakenBtn{
+  .boxTaken > h2{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 5;
   }
+  .boxTaken > .boxTakenBtn{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+  }
+
+  
   
   .winner{
+    position: absolute;
+    display: block;
+    color: white;
+    top:50%;
+    left: 50%;
+    height: 0;
+    width: 75%;
+    transform: translate(-50%,-50%);
+    transition: height .5s;
+  }
+  .winner .overlay{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    background: black;
+    opacity: .95;
+    z-index: -1;
+  }
+  .winner > h3{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+  }
+  .winner > .newGame{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    display: none; 
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.5rem;
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+  }
+
+
+  .tie{
     position: absolute;
     display: none;
     color: white;
@@ -90,8 +161,9 @@ h1{
     height: 75%;
     width: 75%;
     transform: translate(-50%,-50%);
+   
   }
-  .overlay{
+  .tie .overlay{
     position: absolute;
     top:50%;
     left: 50%;
@@ -99,21 +171,35 @@ h1{
     width: 100%;
     transform: translate(-50%,-50%);
     background: black;
-    opacity: .9;
+    opacity: .95;
     z-index: -1;
   }
-  .winner > h3{
+  .tie > h3{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
     transform: translate(-50%,-50%);
     z-index: 5;
   }
-  .winner > .newGame{
+  .tie .newGame2{
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
+    display: block; 
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.5rem;
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
     transform: translate(-50%,-50%);
     z-index: 5;
   }
-  
+ 
+   
